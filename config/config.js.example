@@ -1,0 +1,13 @@
+ module.exports = {
+   "transifex": {
+       "login":"demo",
+       "password":"demo",
+       "projectSlug":"test",
+       "resourceSlug":"test"
+   },
+   "github": {
+           "username": "username",
+           "password": "password",
+           "repo":"repo"
+   }
+ };
