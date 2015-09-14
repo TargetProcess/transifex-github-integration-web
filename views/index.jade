@@ -9,5 +9,8 @@ block content
   div#success
   div#fail
   div#loading
-  div#latestVersion= latestVersion
+  br
+  div
+    label Latest version:
+       input(id="latestVersion" type="text", readonly="readonly", value="#{latestVersion}")
 

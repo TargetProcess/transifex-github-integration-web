@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
         if (err) {
             res.render('index', {title: 'Transifex to gitHub', latestVersion: ''});
         } else {
-            res.render('index', {title: 'Transifex to gitHub', latestVersion: 'Latest version: ' + buffer.toString()});
+            res.render('index', {title: 'Transifex to gitHub', latestVersion: buffer.toString()});
         }
     });
 });

@@ -20,9 +20,9 @@ document.querySelector('#updateTranslation').addEventListener('click', function 
         loading.innerHTML = '';
         if (res.message) {
             success.innerHTML = res.message;
-            var matches = resposne.match(/(\d+\.\d+\.\d+)/g);
+            var matches = res.message.match(/(\d+\.\d+\.\d+)/g);
             if (matches && matches[0]) {
-                latestVersion.innerHTML = 'Latest version: ' + matches[0];
+                latestVersion.value = matches[0];
             }
 
         } else {
