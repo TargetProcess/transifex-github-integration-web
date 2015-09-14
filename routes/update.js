@@ -11,7 +11,7 @@ router.get('/', function (req, res) {
             integration(config).then(function (resposne) {
                 var matches = resposne.match(/(\d+\.\d+\.\d+)/g);
                 if (matches && matches[0]) {
-                    fs.writeFile('./../last-build.log', matches[0]);
+                    fs.writeFile('last-build.log', matches[0],function(){});
                 }
                 res.send({message: resposne});
             }).catch(function (err) {
