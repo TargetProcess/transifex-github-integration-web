@@ -5,10 +5,17 @@ var fs = require("fs");
 router.post('/', function (req, res) {
     res.format({
         'application/json': function (data) {
-            console.log(data);
-            fs.writeFile('tags.json', JSON.stringify(data.body),function(){
-                res.send({message: 'write'});
+            fs.readFile('tags.json', function (err, buffer) {
+                var tags = [];
+                if (!err) {
+                    tags = JSON.parse(buffer.toString());
+                }
+                fs.writeFile('tags.json', tags.concat(JSON.stringify(data.body)), function () {
+                    res.send({message: 'write'});
+                });
             });
+
+
         }
     });
 });
