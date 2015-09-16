@@ -1,16 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  div
-    button#updateTranslation Update translation dictionaries
-  br
-  br
-  div#success
-  div#fail
-  div#loading
-  br
-  div
-    label Latest version:
-       input(id="latestVersion" type="text", readonly="readonly", value="#{latestVersion}")
+    h1= title
+    div
+        button#updateTranslation Update translation dictionaries
+    br
+    br
+    div#success
+    div#fail
+    div#loading
+    br
+    div
+        label Latest version:
+            input(id="latestVersion" type="text", readonly="readonly", value="#{latestVersion}")
+    br
+    details
+        summary Tags
+        for tag in tags
+            p= tag
+
 
