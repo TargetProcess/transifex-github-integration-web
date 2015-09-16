@@ -10,7 +10,7 @@ router.post('/', function (req, res) {
                 if (!err) {
                     tags = JSON.parse(buffer.toString());
                 }
-                fs.writeFile('tags.json', tags.concat(JSON.stringify(data.body)), function () {
+                fs.writeFile('tags.json', JSON.stringify(tags.concat(data.body)), function () {
                     res.send({message: 'write'});
                 });
             });
