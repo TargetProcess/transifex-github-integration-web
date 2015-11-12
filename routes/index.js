@@ -21,7 +21,7 @@ var getTags = function () {
             if (err) {
                 resolve([]);
             } else {
-                resolve(JSON.parse(buffer.toString()));
+                resolve(JSON.parse(buffer.toString()).sort());
             }
         })
     });
