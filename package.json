@@ -14,7 +14,7 @@
     "lodash": "^3.10.1",
     "morgan": "~1.5.1",
     "serve-favicon": "~2.2.0",
-    "transifex-github-integration": "git://github.com/TargetProcess/transifex-github-integration.git#0.3.0"
+    "transifex-github-integration": "git://github.com/TargetProcess/transifex-github-integration.git#0.3.2"
   },
   "devDependencies": {
     "forever": "^0.15.1"
